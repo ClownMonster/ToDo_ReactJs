@@ -16,7 +16,7 @@ class App extends React.Component {
       {
         id:2,
         title:'Hacker Rank solve',
-        completed:false
+        completed:true
       },
       {
         id:3,
@@ -27,10 +27,10 @@ class App extends React.Component {
   };
 
   render(){
-    console.log(this.state.todos);
+
     return(
       <div className="App">
-        < Todos />
+        < Todos  todos={ this.state.todos } />
       </div>
     );
   }
