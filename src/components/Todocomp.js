@@ -36,7 +36,7 @@ export class Todocomp extends Component {
                     <input type="checkbox" onChange={this.props.mark_complete.bind(this,id)} style = {this.input_style()} />{ '   ' }
                     {title}
                     { ' ' }
-                    <button style={btnStyle}>X</button>
+                    <button onClick={this.props.del_todo.bind(this, id)} style={btnStyle}>X</button>
                     
                 </p>
             </div>
