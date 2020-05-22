@@ -35,6 +35,8 @@ export class Todocomp extends Component {
                 <p>
                     <input type="checkbox" onChange={this.props.mark_complete.bind(this,id)} style = {this.input_style()} />{ '   ' }
                     {title}
+                    { ' ' }
+                    <button style={btnStyle}>X</button>
                     
                 </p>
             </div>
@@ -45,5 +47,17 @@ export class Todocomp extends Component {
 Todocomp.prototypes ={
     todo: PropTypes.object.isRequired
 };
+
+const btnStyle = {
+    background:'black',
+    cursor:'pointer',
+    padding:'2px',
+    borderRadius:'50%',
+    color:'white',
+    float:'right',
+    outline:'none',
+
+}
+
 
 export default Todocomp
