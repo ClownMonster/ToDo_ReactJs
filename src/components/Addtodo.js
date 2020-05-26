@@ -4,7 +4,7 @@ export class Addtodo extends Component {
 
     inputStyle =  () =>{
         return{
-            ''
+            'background':'red'
         }
     }
 
@@ -12,7 +12,7 @@ export class Addtodo extends Component {
     render() {
         return (
             <form>
-                <input type="text" style={inputStyle()} placeholder="Enter the Task" />
+                <input type="text" style={this.inputStyle()} placeholder="Enter the Task" />
                 <input type="submit" />
             </form>
         )

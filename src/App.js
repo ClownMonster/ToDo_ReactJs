@@ -1,7 +1,7 @@
 import React from 'react';
 import Todos from './components/Todos'
 import Header from './components/layout/Header'
-import Addtodo from './compoents/Addtodo'
+import Addtodo from './components/Addtodo'
 
 
 import './App.css';
