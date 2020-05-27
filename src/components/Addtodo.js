@@ -4,7 +4,7 @@ export class Addtodo extends Component {
 
    formStyle = ()=>{
        return{
-           'width':'60rem',
+           'width':'60%',
            'height':'3rem',
            'marginBottom':'5rem',
            'paddingLeft':'2rem',

@@ -32,7 +32,7 @@ export class Todocomp extends Component {
         const {id, title } = this.props.todo;
         return (
             <div style = {this.getStyle()} >
-                <p>
+                <p >
                     <input type="checkbox" onChange={this.props.mark_complete.bind(this,id)} style = {this.input_style()} />{ '   ' }
                     {title}
                     { ' ' }
@@ -56,8 +56,10 @@ const btnStyle = {
     color:'white',
     float:'right',
     outline:'none',
+    
 
 }
+
 
 
 export default Todocomp
