@@ -2,18 +2,24 @@ import React, { Component } from 'react'
 
 export class Addtodo extends Component {
 
-    inputStyle =  () =>{
-        return{
-            'background':'red'
-        }
-    }
+   formStyle = ()=>{
+       return{
+           'width':'60rem',
+           'height':'3rem',
+           'marginBottom':'5rem',
+           'paddingLeft':'2rem',
+
+       }
+   }
 
 
     render() {
         return (
-            <form>
-                <input type="text" style={this.inputStyle()} placeholder="Enter the Task" />
-                <input type="submit" />
+            <form style={this.formStyle()}>
+            <div class="form-group">
+             <input  type="email" class="form-control" id="exampleInputEmail1"  placeholder="Enter The Task.."/>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         )
     }

@@ -52,7 +52,9 @@ class App extends React.Component {
     return(
       <div className="App">
         < Header />
+        <br/>
         < Addtodo />
+        <br/>
         < Todos  todos={ this.state.todos } markComplete = {this.markComplete} 
         delTodo = {this.delTodo}
         />
