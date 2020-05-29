@@ -1,3 +1,3 @@
-<div>
-    <h1 style = "color:red">Todo App Using React Js </h1>
+<div align = "center>
+    <h1 >Todo App Using React Js </h1>
 </div>
