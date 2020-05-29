@@ -2,6 +2,7 @@ import React from 'react';
 import Todos from './components/Todos'
 import Header from './components/layout/Header'
 import Addtodo from './components/Addtodo'
+import {v4 as uuid} from 'uuid'
 
 
 import './App.css';
@@ -11,18 +12,18 @@ class App extends React.Component {
   state = {
     todos:[
       {
-        id:1,
-        title:'Github load',
+        id:uuid(),
+        title:'Github',
         completed:false
       },
       {
-        id:2,
+        id:uuid(),
         title:'Hacker Rank solve',
-        completed:true
+        completed:false
       },
       {
-        id:3,
-        title:'Github Push',
+        id:uuid(),
+        title:'Excercise',
         completed:false
       }
     ]
@@ -45,6 +46,21 @@ class App extends React.Component {
   }
 
 
+  //adding the task
+
+  addTodo =  (title) =>{
+    
+    const newTodo = {
+      id : uuid(),
+      title, // same as title:title
+      completed: false
+
+    }
+
+    this.setState({todos: [...this.state.todos, newTodo]  })
+
+  }
+
 
 
   render(){
@@ -53,7 +69,7 @@ class App extends React.Component {
       <div className="App">
         < Header />
         <br/>
-        < Addtodo />
+        < Addtodo  addTodo = {this.addTodo}/>
         <br/>
         < Todos  todos={ this.state.todos } markComplete = {this.markComplete} 
         delTodo = {this.delTodo}

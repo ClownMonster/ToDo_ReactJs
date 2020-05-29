@@ -6,24 +6,21 @@ export class Todocomp extends Component {
     getStyle = () =>
     {   
         return{
-        background:this.props.todo.completed ? ' #c0392b ': ' #1a5276 ' ,
+        background:this.props.todo.completed ? ' #a6acaf ': ' #fdfefe ' ,
         padding:'0.4rem',
         border: '1px solid  #979a9a ',
-        boxShadow: '2px 2px 2px 1px black'
-
-
-
-        }
-    }
-
-
-    input_style = () =>{
-        return{
-            cursor:'pointer',
-            border:'2px solid white'
+        boxShadow: '2px 2px 2px 1px black',
+        width:'60%',
+        position:'relative',
+        top:'50%',
+        left:'50%',
+        transform:'translate(-50%, -50%)'
 
         }
     }
+
+
+    
 
 
 
@@ -33,7 +30,7 @@ export class Todocomp extends Component {
         return (
             <div style = {this.getStyle()} >
                 <p >
-                    <input type="checkbox" onChange={this.props.mark_complete.bind(this,id)} style = {this.input_style()} />{ '   ' }
+                    <input type="checkbox" onChange={this.props.mark_complete.bind(this,id)} style = {input_style} />{ '   ' }{ ' ' }
                     {title}
                     { ' ' }
                     <button onClick={this.props.del_todo.bind(this, id)} style={btnStyle}>X</button>
@@ -49,7 +46,7 @@ Todocomp.prototypes ={
 };
 
 const btnStyle = {
-    background:'black',
+    background:'red',
     cursor:'pointer',
     padding:'2px',
     borderRadius:'50%',
@@ -57,6 +54,14 @@ const btnStyle = {
     float:'right',
     outline:'none',
     
+
+
+}
+
+const input_style = {
+    borderRadius:'50%',
+    cursor:'pointer',
+    border:'2px solid green',
 
 }
 
