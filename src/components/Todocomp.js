@@ -6,15 +6,17 @@ export class Todocomp extends Component {
     getStyle = () =>
     {   
         return{
-        background:this.props.todo.completed ? ' #a6acaf ': ' #fdfefe ' ,
-        padding:'0.4rem',
+        background:this.props.todo.completed ? 'black': 'white',
+        color:this.props.todo.completed ? 'white': 'black',
+        padding:'0.3rem',
+        marginBottom:'0.7rem',
         border: '1px solid  #979a9a ',
-        boxShadow: '2px 2px 2px 1px black',
         width:'60%',
         position:'relative',
         top:'50%',
         left:'50%',
-        transform:'translate(-50%, -50%)'
+        transform:'translate(-50%, -50%)',
+        textAlign:'center'
 
         }
     }
@@ -30,8 +32,8 @@ export class Todocomp extends Component {
         return (
             <div style = {this.getStyle()} >
                 <p >
-                    <input type="checkbox" onChange={this.props.mark_complete.bind(this,id)} style = {input_style} />{ '   ' }{ ' ' }
-                    {title}
+                    <input style={btnStyle} onChange={this.props.mark_complete.bind(this,id)} class="form-check-input" type="checkbox" id="defaultCheck1"/>{' '}
+                    <a >{title}</a>
                     { ' ' }
                     <button onClick={this.props.del_todo.bind(this, id)} style={btnStyle}>X</button>
                     
@@ -55,13 +57,6 @@ const btnStyle = {
     outline:'none',
     
 
-
-}
-
-const input_style = {
-    borderRadius:'50%',
-    cursor:'pointer',
-    border:'2px solid green',
 
 }
 
